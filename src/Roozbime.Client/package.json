@@ -1,0 +1,25 @@
+{
+  "name": "roozbimeclient",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.22.0",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "@tailwindcss/cli": "^4.1.17",
+    "@tailwindcss/vite": "^4.1.17",
+    "esbuild": "^0.27.0",
+    "tailwindcss": "^4.1.17",
+    "vazirmatn": "^33.0.3"
+  },
+  "devDependencies": {
+    "vite": "^7.2.6"
+  }
+}

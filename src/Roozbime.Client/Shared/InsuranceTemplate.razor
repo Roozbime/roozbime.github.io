@@ -1,0 +1,50 @@
+﻿<PageTitle>روزبیمه - @Title</PageTitle>
+
+<section class="flex flex-1 flex-col bg-gray-200 gap-1 p-1 overflow-hidden">
+    <section class="flex flex-row justify-center items-center p-3 text-white text-3xl text-center font-bold bg-blue-800 rounded shadow">
+        @Title
+    </section>
+    <section class="flex flex-col flex-1 bg-gray-50 p-2 rounded shadow prose lg:prose-xl font-sahel max-w-full overflow-auto">
+        @ChildContent
+    </section>
+    <section class="flex flex-initial flex-row justify-center">
+        <section class="flex flex-1 flex-row justify-center text-white gap-1 max-w-3xl">
+            @if (Href is not null)
+            {
+                <a href="@Href"
+               target="_blank"
+               class="flex flex-row flex-1 justify-center items-center text-white bg-green-800 p-2 rounded shadow text-2xl font-bold gap-2">
+                    <span class="flex flex-row flex-1 justify-center items-center ">
+                        خرید آنلاین
+                    </span>
+                    <i class="fa-solid fa-credit-card p-2"></i>
+                </a>
+            }
+            <a href="/about"
+               class="flex flex-row flex-1 justify-center items-center text-white bg-red-800 p-2 rounded shadow text-2xl font-bold gap-2">
+                <span class="flex flex-row flex-1 justify-center items-center">
+                    @if (Href is not null)
+                    {
+                        <span>تماس با ما</span>
+                    }
+                    else
+                    {
+                        <span>ارتباط با کارشناس فروش</span>
+                    }
+                </span>
+                <i class="fa-solid fa-phone p-2"></i>
+            </a>
+        </section>
+    </section>
+</section>
+
+@code {
+    [Parameter]
+    public string Title { get; set; } = null!;
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string? Href { get; set; }
+}
