@@ -1,0 +1,58 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager Nav
+@inject IJSRuntime Js
+
+<main class="container m-auto flex flex-col flex-1 bg-gray-300 overflow-hidden">
+    <header class="flex flex-initial flex-row items-center p-2 shadow bg-blue-600 text-white font-bold z-10">
+        <span class="flex-1">
+            <span class="text-3xl">
+                روزبیمه
+            </span>
+            <span class="mr-2">
+                روشی امن و معتبر برای خرید بیمه
+            </span>
+        </span>
+        <span class="flex flex-1 flex-row justify-end mx-6">
+            <img class="p-1 rounded bg-white/70" src="./images/hl3.png" alt="بیمه سامان"/>
+        </span>
+        @if (Nav.ToAbsoluteUri(Nav.Uri).AbsolutePath != "/")
+        {
+            <button @onclick="OnPopAsync" class="flex flex-row items-center justify-center px-2">
+                <i class="fa-solid fa-2x fa-angle-left"></i>
+            </button>
+        }
+    </header>
+    <main class="flex flex-1 flex-col md:flex-row-reverse overflow-hidden">
+        <article class="flex flex-1 flex-col overflow-auto">
+            @Body
+        </article>
+        <aside class="flex flex-initial flex-col text-white gap-2 bg-blue-800 md:pb-2 md:w-52">
+            <nav class="flex flex-1 flex-row md:flex-col gap-2 md:py-2">
+                @*<MainNavItem Href="/" Icon="fa-solid fa-home" Text="خانه" />*@
+                <MainNavItem Href="/" Icon="fa-solid fa-lightbulb" Text="بیمه ها"/>
+                @*<MainNavItem Href="/services" Icon="fa-solid fa-briefcase" Text="خدمات" />*@
+                <MainNavItem Href="/about" Icon="fa-solid fa-headset" Text="پشتیبانی"/>
+            </nav>
+        </aside>
+    </main>
+</main>
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Nav.LocationChanged += OnNav;
+    }
+
+    private async void OnNav(object? sender, LocationChangedEventArgs arg)
+    {
+        await InvokeAsync(StateHasChanged).ConfigureAwait(false);
+    }
+
+    private async Task OnPopAsync()
+    {
+        await Js.InvokeVoidAsync("history.back").ConfigureAwait(false);
+    }
+
+}

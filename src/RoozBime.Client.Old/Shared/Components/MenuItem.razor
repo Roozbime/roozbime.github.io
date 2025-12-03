@@ -1,0 +1,21 @@
+﻿<a href="@Href"
+   class="flex flex-col justify-center items-center bg-blue-600 text-white rounded shadow"
+   @onclick="OnClick">
+    <i class="@Icon px-3 py-3 text-2xl"></i>
+    <span class="pb-3 md:pb-0 md:text-2xl pl-3 pr-3 md:pr-0 text-center">@Text</span>
+</a>
+
+@code {
+    [Parameter]
+    public string? Icon { get; set; }
+
+    [Parameter]
+    public string? Text { get; set; }
+
+    [Parameter]
+    public string? Href { get; set; }
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClick { get; set; }
+
+}

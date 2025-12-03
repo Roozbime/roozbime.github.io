@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://www.roozbimeh.ir/</loc>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://www.roozbimeh.ir/about</loc>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>https://www.roozbimeh.ir/insurances/accident</loc>
+	</url>
+	<url>
+		<loc>https://www.roozbimeh.ir/insurances/car</loc>
+	</url>
+	<url>
+		<loc>https://www.roozbimeh.ir/insurances/complementarytreatment</loc>
+	</url>
+	<url>
+		<loc>https://www.roozbimeh.ir/insurances/elevator</loc>
+	</url>
+	<url>
+		<loc>https://www.roozbimeh.ir/insurances/fire</loc>
+	</url>
+	<url>
+		<loc>https://www.roozbimeh.ir/insurances/laptop</loc>
+	</url>
+	<url>
+		<loc>https://www.roozbimeh.ir/insurances/liability</loc>
+	</url>
+	<url>
+		<loc>https://www.roozbimeh.ir/insurances/life</loc>
+	</url>
+	<url>
+		<loc>https://www.roozbimeh.ir/insurances/mobile</loc>
+	</url>
+	<url>
+		<loc>https://www.roozbimeh.ir/insurances/thridparty</loc>
+	</url>
+	<url>
+		<loc>https://www.roozbimeh.ir/insurances/travel</loc>
+	</url>
+</urlset>

@@ -1,0 +1,39 @@
+﻿@page "/"
+
+<PageTitle>روز بیمه</PageTitle>
+
+<section class="flex flex-col gap-2 p-2">
+    <section class="flex flex-row gap-2 bg-gray-100 rounded shadow"> 
+        <InsuranceItem target="_blank" Href="https://www.si24.ir/fa/static_pages/111441-990602-%D9%BE%D8%B1%D8%AF%D8%A7%D8%AE%D8%AA-%D8%A2%D9%86%D9%84%D8%A7%D9%8A%D9%86-%D8%AD%D9%82-%D8%A8%D9%8A%D9%85%D9%87.html" Icon="fa-regular fa-credit-card" Text="پرداخت آنلاین حق بیمه" Class="bg-blue-800" />
+    </section>
+    <section class="flex flex-col gap-2 bg-gray-100 rounded shadow">
+        <span class="text-xl font-bold text-center m-2 p-2 rounded shadow bg-lime-800 text-white">
+            خرید آنلاین
+        </span>
+        <section class="flex flex-row justify-center items-center flex-wrap m-2 gap-2">
+            <InsuranceItem Href="/insurances/fire" Icon="fa-solid fa-fire-extinguisher" Text="بیمه آتش سوزی" Class="bg-orange-600" />
+            <InsuranceItem Href="/insurances/mobile" Icon="fa-solid fa-mobile-screen-button" Text="بیمه موبایل" Class="bg-sky-600" />
+            <InsuranceItem Href="/insurances/thridparty" Icon="fa-solid fa-person" Text="بیمه شخص ثالث" Class="bg-green-600" />
+            <InsuranceItem Href="/insurances/accident" Icon="fa-solid fa-triangle-exclamation" Text="بیمه حوادث" Class="bg-yellow-500" />
+            <InsuranceItem Href="/insurances/elevator" Icon="fa-solid fa-elevator" Text="بیمه آسانسور" Class="bg-indigo-500" />
+        </section>
+    </section>
+
+    <section class="flex flex-col gap-2 bg-gray-200 rounded shadow">
+        <span class="text-xl font-bold text-center m-2 p-2 rounded shadow bg-red-800 text-white">
+            خرید تلفنی یا حضوری
+        </span>
+        <section class="flex flex-row flex-wrap m-2 gap-2">
+            <InsuranceItem Href="/insurances/laptop" Icon="fa-solid fa-laptop" Text="بیمه لپتاپ" Class="bg-blue-600" />
+            <InsuranceItem Href="/insurances/car" Icon="fa-solid fa-car-crash" Text="بیمه بدنه" Class="bg-stone-500" />
+            <InsuranceItem Href="/insurances/life" Icon="fa-solid fa-coins" Text="بیمه عمر" Class="bg-amber-600" />
+            <InsuranceItem Href="/insurances/complementarytreatment" Icon="fa-solid fa-suitcase-medical" Text="بیمه درمان تکمیلی" Class="bg-red-600" />
+            <InsuranceItem Href="/insurances/liability" Icon="fa-solid fa-users" Text="بیمه مسئولیت پزشکان و پیرا پزشکان" Class="bg-indigo-800" />
+            <InsuranceItem Href="/insurances/travel" Icon="fa-solid fa-passport" Text="بیمه مسافرتی" Class="bg-amber-800" />
+        </section>
+    </section>
+</section>
+
+@code {
+
+}

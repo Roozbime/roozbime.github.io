@@ -10,6 +10,7 @@
         <BlazorEnableTimeZoneSupport>false</BlazorEnableTimeZoneSupport>
         <InvariantGlobalization>true</InvariantGlobalization>
         <Version>1.0.1</Version>
+        <RootNamespace>RoozBime.Client</RootNamespace>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -37,10 +38,5 @@
         <Exec Command="npm install" />
         <Exec Command="npm run publish" />
     </Target>
-
-    <ItemGroup>
-        <Folder Include="Models\" />
-        <Folder Include="Services\" />
-    </ItemGroup>
 
 </Project>

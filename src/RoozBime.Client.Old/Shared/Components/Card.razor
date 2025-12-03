@@ -1,0 +1,11 @@
+﻿<section @attributes="AdditionalAttributes" class="flex flex-col gap-2 p-2 bg-gray-50 rounded shadow @AdditionalAttributes?.GetValueOrDefault("class")">
+    @ChildContent
+</section>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IReadOnlyDictionary<string, object>? AdditionalAttributes { get; set; }
+}
